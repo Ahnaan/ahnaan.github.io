@@ -24,17 +24,24 @@
 
 	<body>
 	
-		<div id = "circle"></div>
+		
 		
 		<script type = "text/javascript">
 
-			$("#circle").click(function()
+
+			$.ajax("ajax.txt").done(function(data))
 
 			{
 
-				$(this).animate({width:"400px",height:"400px",marginLeft:"60px"}, 2000);		
+				alert(data);
 
-			})
+			}).fail(function()
+
+			{
+
+				alert("Could not get data")
+			
+			});
 
 		</script>
 
